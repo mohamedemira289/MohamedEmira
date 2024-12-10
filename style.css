@@ -1,0 +1,190 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #001;
+    display: flex;
+}
+
+.img_box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid white;
+    flex-shrink: 0;
+}
+
+.img_box img {
+    width: 100%;
+    height: 100%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-transform: capitalize;
+}
+
+.menu {
+    background-color: #123;
+    width: 60px;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+    position: relative;
+}
+
+/* Prevent hover behavior from conflicting with toggle functionality */
+.menu:hover {
+    width: 60px;
+}
+
+.menu.expanded {
+    width: 260px;
+}
+
+ul {
+    list-style: none;
+    position: relative;
+    height: 95%;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.menu.collapsed ul {
+    opacity: 0;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    gap: 40px;
+    transition: 0.5s;
+}
+
+ul li a:hover,
+.active,
+.data-info .box:hover,
+td:hover {
+    background-color: rgb(173, 207, 207);
+}
+
+.log-out {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.log-out a {
+    background-color: red;
+}
+
+ul li a i {
+    font-size: 30px;
+}
+
+.content {
+    width: 100%;
+    margin: 4px;
+}
+
+.title-info {
+    background-color: rgba(130, 142, 239, 0.553);
+    display: flex;
+    padding: 8px;
+    margin: 8px 0px;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+
+.data-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.data-info .box {
+    background-color: #123;
+    flex-basis: 150px;
+    height: 150px;
+    flex-grow: 1;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.data-info .box .data {
+    text-align: center;
+}
+
+.data-info .box .data span {
+    font-size: 30px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-spacing: 8px;
+}
+
+td,
+th {
+    background-color: #123;
+    height: 40px;
+    border-radius: 5px;
+}
+
+th {
+    background-color: rgba(130, 142, 239, 0.553);
+}
+
+td span {
+    background-color: blueviolet;
+}
+
+/* Toggle Button Styles */
+.toggle-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.toggle-button span {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+.menu.collapsed .toggle-button span:nth-child(1) {
+    transform: rotate(45deg) translateY(18px);
+}
+
+.menu.collapsed .toggle-button span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu.collapsed .toggle-button span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-15px);
+}
